@@ -23,20 +23,21 @@ class Order {
   }
 
   void printWelcomeMessage() {
-    print('Welcome to the Order!');
+    print('Welcome to the Order System!');
   }
 }
 
 void main() {
   // Create object of Order with optional properties
-  Order order1 = Order(1, 'Order 1', startDate: DateTime.now(), expiryDate: DateTime.now().add(Duration(days: 7)));
+  Order order1 = Order(1, 'Jeans', startDate: DateTime.now(), expiryDate: DateTime.now().add(Duration(days: 7)));
   order1.printOrderDetails();
-  order1.printWelcomeMessage();
 
   // Create object of Order with all properties as mandatory
-  Order order2 = Order.withAllProperties(2, 'Order 2', DateTime.now(), DateTime.now().add(Duration(days: 14)));
+  Order order2 = Order.withAllProperties(2, 'Pant', DateTime.now(), DateTime.now().add(Duration(days: 14)));
   order2.printOrderDetails();
-  order2.printWelcomeMessage();
+
+  // Print welcome message
+  order1.printWelcomeMessage();
 }
 
 
@@ -69,7 +70,6 @@ void main() {
       print('راسب');
   }
 }
-
 
 
 // -------------------------------------------------------------------------
@@ -109,4 +109,44 @@ void main() {
   print('الطلاب الذين حصلوا على الدرجة 70 فما فوق هم $count70');
   print('الطلاب الذين حصلوا على الدرجة 60 فما فوق هم $count60');
   print('الطلاب الذين حصلوا على الدرجة 50 فما فوق هم $count50');
+}
+
+
+// -------------------------------------------------------------------------
+// Question 4
+
+// 1
+var average;
+final int age = 20;
+
+// 3
+List<int?> myList3 = List.filled(8, null, growable: true);
+
+// 4
+List<Object?> myList3 = List.filled(8, null, growable: true);
+myList3.add(30);
+
+// 5
+bool ifExisting = myList3.contains(30);
+print("ifExisting is $ifExisting, and its type is ${ifExisting.runtimeType}");
+
+// 6
+int x = 1;
+String x1 = "Nada";
+print("the number is $x");
+print("the value of x1 is $x1");
+
+// 7
+class Student {
+  int id;
+  double avg;
+  String name;
+
+  Student(this.id, this.avg, this.name);
+
+  Student.first(this.id, {this.name = "", this.avg = 0.0});
+}
+
+void main() {
+  var objectStudent = Student(1201, 90, "mohamed");
 }
