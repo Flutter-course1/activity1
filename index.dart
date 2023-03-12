@@ -49,8 +49,8 @@ void main() {
 
   switch (gpa.floor()) { 
     case (gpa > 60):
-        print('ناجح');
-        break;
+      print('ناجح');
+      break;
     case 90:
       print('ممتاز');
       break;
@@ -104,11 +104,11 @@ void main() {
     }
   }
 
-  print('الطلاب الذين حصلوا على الدرجة 90 فما فوق عددهم $count90');
-  print('الطلاب الذين حصلوا على الدرجة 80 فما فوق عددهم $count80');
-  print('الطلاب الذين حصلوا على الدرجة 70 فما فوق هم $count70');
-  print('الطلاب الذين حصلوا على الدرجة 60 فما فوق هم $count60');
-  print('الطلاب الذين حصلوا على الدرجة 50 فما فوق هم $count50');
+  print('Number of students who got 90 or more $count90');
+  print('Number of students who got 80 or more $count80');
+  print('Number of students who got 70 or more $count70');
+  print('Number of students who got 60 or more $count60');
+  print('Number of students who got 50 or more $count50');
 }
 
 
