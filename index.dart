@@ -69,3 +69,44 @@ void main() {
       print('راسب');
   }
 }
+
+
+
+// -------------------------------------------------------------------------
+// Question 3
+
+void main() {
+  List<double> grades = List.filled(50, 0); 
+
+  for (int i = 0; i < 50; i++) {
+    grades[i] = (50 + i).toDouble();
+  }
+
+  int count90 = 0;
+  int count80 = 0;
+  int count70 = 0;
+  int count60 = 0;
+  int count50 = 0;
+
+  for (int i = 0; i < 50; i++) {
+    double grade = grades[i];
+
+    if (grade >= 90) {
+      count90++;
+    } else if (grade >= 80) {
+      count80++;
+    } else if (grade >= 70) {
+      count70++;
+    } else if (grade >= 60) {
+      count60++;
+    } else if (grade >= 50) {
+      count50++;
+    }
+  }
+
+  print('الطلاب الذين حصلوا على الدرجة 90 فما فوق عددهم $count90');
+  print('الطلاب الذين حصلوا على الدرجة 80 فما فوق عددهم $count80');
+  print('الطلاب الذين حصلوا على الدرجة 70 فما فوق هم $count70');
+  print('الطلاب الذين حصلوا على الدرجة 60 فما فوق هم $count60');
+  print('الطلاب الذين حصلوا على الدرجة 50 فما فوق هم $count50');
+}
