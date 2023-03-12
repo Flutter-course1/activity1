@@ -39,3 +39,33 @@ void main() {
   order2.printWelcomeMessage();
 }
 
+
+// -------------------------------------------------------------------------
+// Question 2
+
+void main() {
+  double gpa = 75; 
+
+  switch (gpa.floor()) { 
+    case (gpa > 60):
+        print('ناجح');
+        break;
+    case 90:
+      print('ممتاز');
+      break;
+    case 80:
+      print('جيد جدا');
+      break;
+    case 70:
+      print('جيد');
+      break;
+    case 60:
+      print('مقبول');
+      break;
+    case 50:
+      print('متوسط');
+      break;
+    default:
+      print('راسب');
+  }
+}
