@@ -116,27 +116,45 @@ void main() {
 // Question 4
 
 // 1
-var average;
+final String average; || String? average;
 final int age = 20;
 
+// 2
+class Student {
+  int id;
+  String name;
+  double avg;
+}
+
+Student(this.id, {this.name, this.avg = 0});
+Student.first(int id, String name, {double avg = 0}):id = id, name = name, avg = avg,
+
+void main(){
+  var student1 = Student.first(1, "Nada", avg: 90);
+}
+
+
 // 3
-List<int?> myList3 = List.filled(8, null, growable: true);
+List<int?> myList3 = List.filled(8, 0, growable: true);
 
 // 4
-List<Object?> myList3 = List.filled(8, null, growable: true);
-myList3.add(30);
+// No Error
 
 // 5
+// No Error
+
+// 6 
 bool ifExisting = myList3.contains(30);
 print("ifExisting is $ifExisting, and its type is ${ifExisting.runtimeType}");
 
-// 6
+// 7
 int x = 1;
 String x1 = "Nada";
-print("the number is $x");
+print("the number is $x"); // Number
+print("the number is" +  x.toString()); // String
 print("the value of x1 is $x1");
 
-// 7
+// 8
 class Student {
   int id;
   double avg;
@@ -148,5 +166,5 @@ class Student {
 }
 
 void main() {
-  var objectStudent = Student(1201, 90, "mohamed");
+  var student1 = Student(1, 90, "Nada");
 }
